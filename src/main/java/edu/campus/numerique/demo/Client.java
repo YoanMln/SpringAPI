@@ -1,9 +1,19 @@
 package edu.campus.numerique.demo;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Client entity representing a customer")
 public class Client {
+    @Schema(description = "Unique identifier of the client", example = "1")
     private int id;
+
+    @Schema(description = "Name of the client", example = "John")
     private String name;
+
+    @Schema(description = "Email address of the client")
     private String email;
+
+    @Schema(description = "Phone number of the client", example = "+1234567890")
     private String phone;
 
     public Client() {
