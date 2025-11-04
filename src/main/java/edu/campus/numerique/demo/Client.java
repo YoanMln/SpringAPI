@@ -1,9 +1,14 @@
 package edu.campus.numerique.demo;
 
+import jakarta.persistence.*;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+@Entity
+@Table(name = "Client")
 @Schema(description = "Client entity representing a customer")
 public class Client {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Unique identifier of the client", example = "1")
     private int id;
 
